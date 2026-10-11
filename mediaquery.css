@@ -1,0 +1,55 @@
+/* Tablet View (Screens 768px wide and down) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    /* Change grid from 3 columns to 2 columns on tablets */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .header h1 {
+        font-size: 2.25rem;
+    }
+
+    .header h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile View (Screens 480px wide and down) */
+@media screen and (max-width: 480px) {
+    /* Stack navigation items vertically or space them nicely */
+    .navigation {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* Collapse grid to a single column on phones */
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Reduce card padding slightly for smaller screens */
+    .card {
+        padding: 20px;
+    }
+
+    /* Adjust about page & contact form container padding */
+    .content {
+        padding: 24px 20px;
+    }
+
+    .contact-form button {
+        width: 100%; /* Make submit button full-width on mobile for easier tapping */
+        align-self: stretch;
+    }
+}
